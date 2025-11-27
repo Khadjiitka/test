@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bestiary of Skyrim</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+
+<link rel="style" href="../style/style.css">
+<link rel="style" href="../style/bestiary.css">
+
+<style>
+ /* GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background: url('../pic/enemy_pic.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #e5e5e5;
+    overflow-x: hidden;
+}
+
+/* Fog overlay */
+.background-fog {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+/* NAVIGATION */
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: rgba(20,20,20,0.8);
+    padding: 20px;
+    border-right: 2px solid #555;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.6);
+}
+
+.side-menu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 22px;
+    font-family: "IM Fell English SC", serif;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 12px 0;
+}
+
+.side-menu ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    color: white;
+    margin-left: 5px;
+}
+
+.btn-generator-nav {
+    display: block;
+    margin-top: 30px;
+    padding: 12px;
+    background: #2d2d2d;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-generator-nav:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+/* CONTENT */
+.content {
+    margin-left: 300px;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центрируем все содержимое */
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 35px;
+    text-shadow: 0 0 10px black;
+}
+
+.category-section {
+    margin-bottom: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центрируем блок категории */
+}
+
+h2.category-title {
+    font-size: 32px;
+    margin: 25px 0;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+/* CATEGORY LIST — максимум 3 картинки в ряд */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-content: center; /* центрируем сетку */
+    width: 100%;
+}
+
+/* CATEGORY ITEM */
+.category-item {
+    width: 220px;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 15px black;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* Hover effect */
+.category-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px black;
+}
+
+.category-item:hover img {
+    filter: blur(3px) brightness(0.85);
+    transform: scale(1.08);
+}
+
+/* LABEL */
+.category-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.4s;
+}
+
+/* Smooth reveal */
+.category-item:hover .category-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+<nav class="side-menu">
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="../pages/main.html">Main Page</a></li>
+        <li><a href="../pages/history.html">History of Skyrim</a></li>
+        <li><a href="../pages/map.html">Map</a></li>
+        <li><a href="../pages/races.html">Races</a></li>
+        <li><a href="../pages/guilds.html">Guilds</a></li>
+        <li><a href="../pages/magic.html">Schools of Magic</a></li>
+        <li><a href="../pages/weapons.html">Weapons & Armor</a></li>
+        <li><a href="../pages/daedra.html">Daedric Princes</a></li>
+        <li><a href="../pages/dragons.html">Dragons & Shouts</a></li>
+        <li><a href="../pages/skills.html">Skills & Perks</a></li>
+        <li><a href="../pages/bestiary.html">Bestiary</a></li>
+        <li><a href="../pages/alchemy.html">Alchemy</a></li>
+    </ul>
+    <a href="../pages/generator.html" class="btn-generator-nav">Create Your Character</a>
+</nav>
+
+<div class="content">
+<h1>Bestiary of Skyrim</h1>
+
+<!-- Dragons -->
+<div class="category-section">
+<h2 class="category-title">Dragons</h2>
+<div class="category-list">
+    <a class="category-item" href="../pages/dragon_ancient.html">
+        <img src="../pic/bestiary/dragon_ancient.jpg">
+        <div class="category-info">Ancient Dragon</div>
+    </a>
+    <a class="category-item" href="../pages/dragon_elder.html">
+        <img src="../pic/bestiary/dragon_elder.jpg">
+        <div class="category-info">Elder Dragon</div>
+    </a>
+    <a class="category-item" href="../pages/dragon_blood.html">
+        <img src="../pic/bestiary/dragon_blood.webp">
+        <div class="category-info">Blood Dragon</div>
+    </a>
+    <a class="category-item" href="../pages/dragon_fire.html">
+        <img src="../pic/bestiary/dragon_fire.jpg">
+        <div class="category-info">Fire Dragon</div>
+    </a>
+    <a class="category-item" href="../pages/dragon_ice.html">
+        <img src="../pic/bestiary/dragon_ice.webp">
+        <div class="category-info">Ice Dragon</div>
+    </a>
+    <a class="category-item" href="../pages/dragon_legendary.html">
+        <img src="../pic/bestiary/dragon_legendary.jpg">
+        <div class="category-info">Legendary Dragon</div>
+    </a>
+</div>
+</div>
+
+
+<!-- Animals / Wildlife -->
+<div class="category-section">
+<h2 class="category-title">Animals & Wildlife</h2>
+<div class="category-list">
+    <a class="category-item" href="../pages/troll.html">
+        <img src="../pic/bestiary/troll.webp">
+        <div class="category-info">Troll</div>
+    </a>
+    <a class="category-item" href="../pages/bear.html">
+        <img src="../pic/bestiary/bear.jpg">
+        <div class="category-info">Bear</div>
+    </a>
+    <a class="category-item" href="../pages/sabre_cat.html">
+        <img src="../pic/bestiary/sabre_cat.jpg">
+        <div class="category-info">Sabre Cat</div>
+    </a>
+    <a class="category-item" href="../pages/wolf.html">
+        <img src="../pic/bestiary/wolf.webp">
+        <div class="category-info">Wolf</div>
+    </a>
+    <a class="category-item" href="../pages/spider.html">
+        <img src="../pic/bestiary/spider.jpg">
+        <div class="category-info">Spider</div>
+    </a>
+    <a class="category-item" href="../pages/mammoth.html">
+        <img src="../pic/bestiary/mammoth.jpg">
+        <div class="category-info">Crab</div>
+    </a>
+    <a class="category-item" href="../pages/crab.html">
+        <img src="../pic/bestiary/crab.jpg">
+        <div class="category-info">Mammoth</div>
+    </a>
+    <a class="category-item" href="../pages/death_hound.html">
+        <img src="../pic/bestiary/death_hound.webp">
+        <div class="category-info">Death Hound</div>
+    </a>
+    <a class="category-item" href="../pages/ice_wraith.html">
+        <img src="../pic/bestiary/ice_wraith.webp">
+        <div class="category-info">Ice Wraith</div>
+    </a>
+</div>
+</div>
+
+
+
+
+<!-- Dwemer -->
+<div class="category-section">
+<h2 class="category-title">Dwemer / Dwarven Constructs</h2>
+<div class="category-list">
+    <a class="category-item" href="../pages/falmer.html">
+        <img src="../pic/bestiary/falmer.webp">
+        <div class="category-info">Falmer</div>
+    </a>
+    <a class="category-item" href="../pages/dwarven_sphere.html">
+        <img src="../pic/bestiary/dwarven_sphere.webp">
+        <div class="category-info">Dwarven Sphere</div>
+    </a>
+    <a class="category-item" href="../pages/dwarven_spider.html">
+        <img src="../pic/bestiary/dwarven_spider.webp">
+        <div class="category-info">Dwarven Spider</div>
+    </a>
+    <a class="category-item" href="../pages/dwarven_centurion.html">
+        <img src="../pic/bestiary/dwarven_centurion.webp">
+        <div class="category-info">Dwarven Centurion</div>
+    </a>
+    <a class="category-item" href="../pages/chaurus.html">
+        <img src="../pic/bestiary/chaurus.webp">
+        <div class="category-info">Chaurus</div>
+    </a>
+    <a class="category-item" href="../pages/chaurus_hunter.html">
+        <img src="../pic/bestiary/chaurus_hunter.webp">
+        <div class="category-info">Chaurus Hunter</div>
+    </a>
+</div>
+</div>
+
+<!-- Spriggans / Witches / Werebeasts -->
+<div class="category-section">
+<h2 class="category-title">Spriggans & Others</h2>
+<div class="category-list">
+    <a class="category-item" href="../pages/spriggan.html">
+        <img src="../pic/bestiary/spriggan.webp">
+        <div class="category-info">Spriggan</div>
+    </a>
+    <a class="category-item" href="../pages/witch.html">
+        <img src="../pic/bestiary/witch.jpg">
+        <div class="category-info">Hagraven</div>
+    </a>
+    <a class="category-item" href="../pages/werewolf.html">
+        <img src="../pic/bestiary/werewolf.webp">
+        <div class="category-info">Werewolf</div>
+    </a>
+    <a class="category-item" href="../pages/vamp_lord.html">
+        <img src="../pic/bestiary/vamp_lord.jpg">
+        <div class="category-info">Vampire Lord</div>
+    </a>
+    <a class="category-item" href="../pages/gaint.html">
+        <img src="../pic/bestiary/gaint.jpg">
+        <div class="category-info">Gaint</div>
+    </a>
+</div>
+</div>
+
+<!-- Atronachs -->
+<div class="category-section">
+<h2 class="category-title">Atronachs / DLC / Special Enemies</h2>
+<div class="category-list">
+    <a class="category-item" href="../pages/fire_atronach.html">
+        <img src="../pic/bestiary/fire_atronach.webp">
+        <div class="category-info">Fire Atronach</div>
+    </a>
+    <a class="category-item" href="../pages/frost_atronach.html">
+        <img src="../pic/bestiary/frost_atronach.jpg">
+        <div class="category-info">Frost Atronach</div>
+    </a>
+    <a class="category-item" href="../pages/storm_atronach.html">
+        <img src="../pic/bestiary/storm_atronach.webp">
+        <div class="category-info">Storm Atronach</div>
+    </a>
+    <a class="category-item" href="../pages/lurker.html">
+        <img src="../pic/bestiary/lurker.webp">
+        <div class="category-info">Lurker</div>
+    </a>
+    <a class="category-item" href="../pages/seeker.html">
+        <img src="../pic/bestiary/Seeker.jpg">
+        <div class="category-info">Seeker</div>
+    </a>
+    <a class="category-item" href="../pages/wispmother.html">
+        <img src="../pic/bestiary/Wispmother.webp">
+        <div class="category-info">Wispmother</div>
+    </a>
+</div>
+</div>
+
+</body>
+</html>

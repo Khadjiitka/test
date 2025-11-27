@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Greybeards</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+
+<link rel="style" href="../style/style.css">
+<link rel="style" href="../style/greybeards.css">
+
+<style>
+    body{margin:0;padding:0;font-family:'Cinzel',serif;background:url('../pic/dark_fog.jpg') no-repeat center center fixed;background-size:cover;color:#e5e5e5;overflow-x:hidden;}
+    .background-fog{position:fixed;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(2px);z-index:-1;}
+    .side-menu{position:fixed;left:0;top:0;width:260px;height:100%;background:rgba(20,20,20,0.8);padding:20px;border-right:2px solid #555;}
+    .side-menu h2{text-align:center;color:#ddd;font-size:22px;font-family:"IM Fell English SC",serif;}
+    .side-menu ul{list-style:none;padding:0;}
+    .side-menu ul li{margin:12px 0;}
+    .side-menu ul li a{color:#cfcfcf;text-decoration:none;font-size:18px;transition:0.3s;}
+    .btn-generator-nav{display:block;margin-top:30px;padding:12px;background:#2d2d2d;color:white;text-align:center;text-decoration:none;}
+    .content{margin-left:300px;padding:40px;max-width:900px;}
+    .gallery{display:flex;flex-wrap:wrap;gap:25px;margin-top:30px;}
+    .gallery-item{position:relative;width:48%;height:300px;overflow:hidden;border-radius:12px;cursor:pointer;}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:filter 0.4s;}
+    .gallery-item:hover img{filter:blur(3px);}
+    .gallery-info{position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.6);padding:12px;}
+    .back-btn{position:fixed;right:20px;bottom:20px;background:#2d2d2d;color:#fff;padding:12px 20px;border-radius:8px;}
+    h1{font-size:42px;text-shadow:0 0 8px black;}
+    p{font-size:18px;line-height:1.6;}
+    </style>
+</head>
+
+<body>
+<div class="background-fog"></div>
+
+<!-- NAVIGATION -->
+<nav class="side-menu">
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="../pages/main.html">Main Page</a></li>
+        <li><a href="../pages/history.html">History of Skyrim</a></li>
+        <li><a href="../pages/map.html">Map</a></li>
+        <li><a href="../pages/races.html">Races</a></li>
+        <li><a href="../pages/guilds.html">Guilds</a></li>
+        <li><a href="../pages/magic.html">Schools of Magic</a></li>
+        <li><a href="../pages/weapons.html">Weapons & Armor</a></li>
+        <li><a href="../pages/daedra.html">Daedric Princes</a></li>
+        <li><a href="../pages/dragons.html">Dragons & Shouts</a></li>
+        <li><a href="../pages/skills.html">Skills & Perks</a></li>
+        <li><a href="../pages/bestiary.html">Bestiary</a></li>
+        <li><a href="../pages/alchemy.html">Alchemy</a></li>
+    </ul>
+    <a href="../pages/generator.html" class="btn-generator-nav">Create Your Character</a>
+</nav>
+
+
+<div class="content">
+<h1>The Greybeards</h1>
+
+<p>The Greybeards are a reclusive order of monks who devote their lives to mastering the Voice — the Thu'um. They reside atop High Hrothgar, on the Throat of the World, living in silence and meditation.</p>
+
+<p>Their leader is <b>Paarthurnax</b>, an ancient dragon who turned against Alduin and taught mortals how to use the Voice for defense rather than domination. The Greybeards believe that the Dragonborn is destined not for war, but for spiritual balance.</p>
+
+<p>They refuse to take part in mortal conflicts and strongly oppose the Blades’ desire to kill Paarthurnax. Their teachings emphasize peace, restraint, and mastery over one’s own voice and soul.</p>
+
+<div class="gallery">
+<div class="gallery-item">
+<img src="../pic/guilds/Chrotgar.webp" alt="High Hrothgar">
+<div class="gallery-info">High Hrothgar — the sanctuary of the Voice.</div>
+</div>
+
+<div class="gallery-item">
+<img src="../pic/guilds/Paarturnax.jpg" alt="Paarthurnax">
+<div class="gallery-info">Paarthurnax — ancient dragon, mentor of the Dragonborn.</div>
+</div>
+</div>
+
+</div>
+
+<a href="../pages/guilds.html" class="back-btn">Back</a>
+</body>
+</html>

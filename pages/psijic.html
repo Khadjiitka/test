@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Psijic Order</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="style" href="../style/style.css">
+<link rel="style" href="../style/psijic.css">
+
+<style>
+    body{
+    margin:0;
+    padding:0;
+    font-family:'Cinzel',serif;
+    background:url('../pic/dark_fog.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#e5e5e5;
+    overflow-x:hidden;
+}
+
+.background-fog{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter:blur(2px);
+    z-index:-1;
+}
+
+/* NAVIGATION */
+.side-menu{
+    position:fixed;
+    left:0;
+    top:0;
+    width:260px;
+    height:100%;
+    background:rgba(20,20,20,0.85);
+    padding:20px;
+    border-right:2px solid #555;
+    box-shadow:4px 0 20px rgba(0,0,0,0.6);
+    z-index:10;
+}
+
+.side-menu h2{
+    text-align:center;
+    color:#ddd;
+    font-size:22px;
+    font-family:"IM Fell English SC", serif;
+    margin-bottom:25px;
+}
+
+.side-menu ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.side-menu ul li{
+    margin:12px 0;
+}
+
+.side-menu ul li a{
+    color:#cfcfcf;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+    display:block;
+    padding:4px 0;
+}
+
+.side-menu ul li a:hover{
+    color:white;
+    margin-left:6px;
+}
+
+.btn-generator-nav{
+    display:block;
+    margin-top:30px;
+    padding:12px;
+    background:#2d2d2d;
+    border:1px solid #aaa;
+    border-radius:6px;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn-generator-nav:hover{
+    background:#444;
+    transform:scale(1.05);
+}
+
+/* CONTENT */
+.content{
+    margin-left:300px;
+    padding:40px;
+    max-width:1000px;
+}
+
+h1{
+    font-size:48px;
+    text-shadow:0 0 8px black;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* GALLERY FIXED (vertical format) */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:30px;
+}
+
+.gallery-item{
+    position:relative;
+    width:48%;
+    height:450px;   /* ВЫСОТА — вертикальная */
+    overflow:hidden;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover; /* Нормальное заполнение */
+    object-position:center;
+    transition:filter 0.4s, transform 0.4s;
+}
+
+.gallery-item:hover img{
+    filter:blur(3px);
+    transform:scale(1.03);
+}
+
+.gallery-info{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:14px;
+    background:rgba(0,0,0,0.65);
+    font-size:18px;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#2d2d2d;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:16px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#444;
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+<div class="background-fog"></div>
+
+<!-- NAVIGATION -->
+<nav class="side-menu">
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="../pages/main.html">Main Page</a></li>
+        <li><a href="../pages/history.html">History of Skyrim</a></li>
+        <li><a href="../pages/map.html">Map</a></li>
+        <li><a href="../pages/races.html">Races</a></li>
+        <li><a href="../pages/guilds.html">Guilds</a></li>
+        <li><a href="../pages/magic.html">Schools of Magic</a></li>
+        <li><a href="../pages/weapons.html">Weapons & Armor</a></li>
+        <li><a href="../pages/daedra.html">Daedric Princes</a></li>
+        <li><a href="../pages/dragons.html">Dragons & Shouts</a></li>
+        <li><a href="../pages/skills.html">Skills & Perks</a></li>
+        <li><a href="../pages/bestiary.html">Bestiary</a></li>
+        <li><a href="../pages/alchemy.html">Alchemy</a></li>
+    </ul>
+    <a href="../pages/generator.html" class="btn-generator-nav">Create Your Character</a>
+</nav>
+
+
+<div class="content">
+<h1>Psijic Order</h1>
+
+<p>The Psijic Order is the oldest monastic society dedicated to the study of magic and the preservation of mystical knowledge. Originating from the Isle of Artaeum, they remain neutral in political conflicts and act only when the balance of the world is threatened.</p>
+
+<p>During the events in Skyrim, the Psijics intervene due to the discovery of the Eye of Magnus — a relic of unimaginable power capable of altering reality. Their representative, <b>Quaranir</b>, guides the Dragonborn to prevent disaster and restore equilibrium.</p>
+
+<p>The Psijics move through time and space with ease, appearing and vanishing instantaneously. Their power is subtle, unmatched, and often feared by other magical orders.</p>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="../pic/guilds/Psijic.webp" alt="Psijic Monk">
+        <div class="gallery-info">A Psijic monk — master of ancient and forbidden magic.</div>
+    </div>
+</div>
+
+</div>
+
+<a href="../pages/guilds.html" class="back-btn">Back</a>
+</body>
+</html>

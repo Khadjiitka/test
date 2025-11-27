@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background: url('/main_pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e5e5e5;
+}
+
+.background-fog {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
+
+/* Навигация */
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 20px;
+    border-right: 2px solid #555;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.side-menu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 22px;
+    font-family: "IM Fell English SC", serif;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 12px 0;
+}
+
+.side-menu ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    color: white;
+    margin-left: 5px;
+}
+
+.btn-generator-nav {
+    display: block;
+    margin-top: 30px;
+    padding: 12px;
+    background: #2d2d2d;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-generator-nav:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+/* Основной текст */
+.content {
+    position: absolute;
+    right: 40px;
+    top: 120px;
+    width: 32%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+}
