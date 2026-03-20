@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background: url('./guilds/guilds_pic.avif') no-repeat center center fixed;
+    background-size: cover;
+    color: #e5e5e5;
+    overflow-x: hidden;
+}
+
+/* Fog overlay */
+.background-fog {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
+
+/* Navigation panel */
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: rgba(20,20,20,0.8);
+    padding: 20px;
+    border-right: 2px solid #555;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.6);
+}
+
+.side-menu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 22px;
+    font-family: "IM Fell English SC", serif;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 12px 0;
+}
+
+.side-menu ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    color: white;
+    margin-left: 5px;
+}
+
+.btn-generator-nav {
+    display: block;
+    margin-top: 30px;
+    padding: 12px;
+    background: #2d2d2d;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-generator-nav:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+/* CONTENT */
+.content {
+    margin-left: 300px;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px black;
+}
+
+/* VERTICAL GUILD LIST */
+.guild-list {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;       /* увеличенные отступы */
+    padding-bottom: 60px;
+}
+
+.guild-item {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 300px;   /* уменьшенная высота */
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 15px black;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.guild-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guild-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px black;
+}
+
+/* HOVER DESCRIPTION */
+.guild-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 18px;
+    background: rgba(0,0,0,0.65);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s;
+}
+
+.guild-item:hover .guild-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.guild-info h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.guild-info p {
+    font-size: 15px;
+    margin: 5px 0 0;
+    color: #ddd;
+}

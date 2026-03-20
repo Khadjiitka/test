@@ -1,0 +1,575 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyrim Character Creation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url("/pic/BgGener.jpg") no-repeat center center/cover;
+            font-family: 'Cinzel', serif;
+            font-size:18px;
+            color: #e6e6e6;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* LEFT PANEL */
+        .left-panel {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid #777;
+        }
+
+        .left-panel h1 {
+            font-family: "IM Fell English SC", serif;
+            font-size: 38px;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+
+        .left-panel img {
+            width: 300px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .left-panel button,
+        .nav-btn {
+            width: 220px;
+            padding: 12px;
+            margin: 10px 0;
+            background: linear-gradient(to right, #aaa, #ddd);
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            transition: .3s;
+        }
+
+        .left-panel button:hover,
+        .nav-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* RIGHT PANEL */
+            .right-panel {
+                width: 50%;
+                overflow-y: auto;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start; 
+                padding: 60px 0; 
+}
+
+        .form-container {
+            width: 420px;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 28px;
+            font-family: "IM Fell English SC", serif;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .required {
+            color: #bbb;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background: rgba(50, 50, 50, 0.8);
+            border: 1px solid #888;
+            border-radius: 6px;
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size:18px;
+        }
+
+        input:focus:invalid {
+            border-color: #ccc;
+        }
+
+        /* submit */
+        .submit-btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #aaa, #ddd);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* animation */
+        .form-box {
+            transition: .4s;
+        }
+
+        .hidden-form {
+            opacity: 0;
+            transform: translateX(40px);
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        /* sub options */
+        .hidden {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease;
+        }
+
+        .visible {
+            max-height: 500px;
+        }
+
+        .sub-options {
+            margin-left: 15px;
+            margin-top: 8px;
+        }
+        .left-panel button,
+        .nav-btn,
+        .submit-btn {
+          font-family: "IM Fell English SC", serif;
+           font-size: 18px;
+          letter-spacing: 1px;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT -->
+        <div class="left-panel">
+            <h1 id="mainTitle">Create Your Character</h1>
+            <img src="/pic/Pers.gif" alt="Pers">
+
+            <button type="button" id="toggleBtn" onclick="toggleForms()">Login</button>
+            <a href="/index.html" class="nav-btn">Main Page</a>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right-panel">
+            <div class="form-container">
+
+                <!-- REGISTER -->
+                <form method="POST" action="/pages/php/akk.php" enctype="multipart/form-data" id="registerForm" class="form-box" >
+
+
+                    <h2>Character Creation</h2>
+
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" name="email" required placeholder="Enter email">
+
+                    <label>Password <span class="required">*</span></label>
+                    <input type="password" name="password" required placeholder="Enter password">
+
+                    <label>Character Name <span class="required">*</span></label>
+                    <input type="text" name="character_name" required placeholder="Hero name">
+
+                    <label>Gender <span class="required">*</span></label>
+                    <select name="gender" required>
+                        <option value="">Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+
+                    <label>Race <span class="required">*</span></label>
+                    <select name="race" required>
+                        <option value="">Select</option>
+                        <option>Nord</option>
+                        <option>Breton</option>
+                        <option>Imperial</option>
+                        <option>Redguard</option>
+                        <option>Orsimer</option>
+                        <option>Bosmer</option>
+                        <option>Altmer</option>
+                        <option>Dunmer</option>
+                        <option>Khajiit</option>
+                        <option>Argonian</option>
+                    </select>
+
+                    <label>City of Origin</label>
+                    <select name="city">
+                    
+                        <option>Whiterun</option>
+                        <option>Solitude</option>
+                        <option>Windhelm</option>
+                        <option>Riften</option>
+                        <option>Markarth</option>
+                        <option>Falkreath</option>
+                        <option>Morthal</option>
+                        <option>Dawnstar</option>
+                        <option>Winterhold</option>
+                    
+                    </select>
+
+                    <label>Guilds</label>
+                    
+                    <label>Guilds (optional)</label>
+                    
+                    <div class="guild-group">
+                    
+                        <select name="guilds[]" class="guild-select">
+                            <option value="">None</option>
+                            <option>Companions</option>
+                            <option>Thieves Guild</option>
+                            <option>Dark Brotherhood</option>
+                            <option>College of Winterhold</option>
+                            <option>Bards College</option>
+                            <option>Blades</option>
+                            <option>Nightingales</option>
+                            <option>Dawnguard</option>
+                            <option>Volkihar Clan</option>
+                            <option>Imperial Legion</option>
+                            <option>Stormcloaks</option>
+                        </select>
+                    
+                        <select name="guilds[]" class="guild-select">
+                            <option value="">None</option>
+                            <option>Companions</option>
+                            <option>Thieves Guild</option>
+                            <option>Dark Brotherhood</option>
+                            <option>College of Winterhold</option>
+                            <option>Bards College</option>
+                            <option>Blades</option>
+                            <option>Nightingales</option>
+                            <option>Dawnguard</option>
+                            <option>Volkihar Clan</option>
+                            <option>Imperial Legion</option>
+                            <option>Stormcloaks</option>
+                        </select>
+                    
+                        <select name="guilds[]" class="guild-select">
+                            <option value="">None</option>
+                            <option>Companions</option>
+                            <option>Thieves Guild</option>
+                            <option>Dark Brotherhood</option>
+                            <option>College of Winterhold</option>
+                            <option>Bards College</option>
+                            <option>Blades</option>
+                            <option>Nightingales</option>
+                            <option>Dawnguard</option>
+                            <option>Volkihar Clan</option>
+                            <option>Imperial Legion</option>
+                            <option>Stormcloaks</option>
+                        </select>
+                    
+                        <select name="guilds[]" class="guild-select">
+                            <option value="">None</option>
+                            <option>Companions</option>
+                            <option>Thieves Guild</option>
+                            <option>Dark Brotherhood</option>
+                            <option>College of Winterhold</option>
+                            <option>Bards College</option>
+                            <option>Blades</option>
+                            <option>Nightingales</option>
+                            <option>Dawnguard</option>
+                            <option>Volkihar Clan</option>
+                            <option>Imperial Legion</option>
+                            <option>Stormcloaks</option>
+                        </select>
+                    
+                    </div>
+           
+
+                    <label>Weapon Class</label>
+                    <select id="weaponClass"name="weapon_class" onchange="showWeaponOptions()">
+                        <option value="">Select</option>
+                        <option value="one">One-Handed</option>
+                        <option value="two">Two-Handed</option>
+                        <option value="archery">Archery</option>
+                        <option value="magic">Magic</option>
+                    </select>
+
+                    <div id="oneOptions" class="hidden sub-options">
+                    
+                        <select name="weapon_type">
+                            <option>Mace</option>
+                            <option>Sword</option>
+                            <option>Axe</option>
+                        </select>
+                    
+                        <select name="weapon_material">
+                            <option>Ebony</option>
+                            <option>Glass</option>
+                            <option>Steel</option>
+                        </select>
+                    
+                    </div>
+
+                    <div id="twoOptions" class="hidden sub-options">
+                    
+                        <select name="weapon_type">
+                            <option>Greatsword</option>
+                            <option>Battleaxe</option>
+                            <option>Warhammer</option>
+                        </select>
+                    
+                    </div>
+
+                    <div id="archeryOptions" class="hidden sub-options">
+                    
+                        <select name="weapon_material">
+                            <option>Steel</option>
+                            <option>Glass</option>
+                            <option>Daedric</option>
+                        </select>
+                    
+                    </div>
+
+                    <div id="magicOptions" class="hidden sub-options">
+                    
+                        <select name="weapon_type">
+                            <option>Destruction</option>
+                            <option>Alteration</option>
+                            <option>Conjuration</option>
+                        </select>
+                    
+                        <div class="sub-options">
+                    
+                            <select name="spell_element">
+                                <option>Fire</option>
+                                <option>Frost</option>
+                                <option>Shock</option>
+                            </select>
+                    
+                        </div>
+                    
+                    </div>
+
+                    
+
+                    <label>Standing Stone *</label>
+                    <select name="standing_stone" required>
+                        <option>The Apprentice Stone</option>
+                        <option>The Atronach Stone</option>
+                        <option>The Lady Stone</option>
+                        <option>The Lord Stone</option>
+                        <option>The Lover Stone</option>
+                        <option>The Mage Stone</option>
+                        <option>The Ritual Stone</option>
+                        <option>The Serpent Stone</option>
+                        <option>The Steed Stone</option>
+                        <option>The Thief Stone</option>
+                        <option>The Tower Stone</option>
+                        <option>The Warrior Stone</option>
+                    </select>
+
+                    <label>Avatar</label>
+                    <input type="file" name="avatar">
+                    
+                   
+                    <label>Backstory (optional)</label>
+                    <textarea name="backstory" id="backstory"></textarea>
+                    <button type="button" id="generateBtn">Generate with AI</button>
+
+                    <button type="submit" name="register" class="submit-btn">
+                        Forge Destiny
+                    </button>
+
+                </form>
+
+                <!-- LOGIN -->
+                <form method="POST" action="/pages/php/akk.php" id="loginForm" class="form-box hidden-form">
+              
+                    <h2>Enter Skyrim</h2>
+
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" name="email" required>
+
+                    <label>Password <span class="required">*</span></label>
+                    <input type="password" name="password" required>
+
+                    <button type="submit" class="submit-btn">
+                        Enter
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script> //  отключение уже выбранных гильдий в других селектах
+        document.querySelectorAll(".guild-select").forEach(select => {
+                select.addEventListener("change", updateGuildOptions);
+            });
+
+            function updateGuildOptions() {
+
+                const selects = document.querySelectorAll(".guild-select");
+                let selectedValues = [];
+
+                // собираем выбранные значения
+                selects.forEach(sel => {
+                    if (sel.value !== "") {
+                        selectedValues.push(sel.value);
+                    }
+                });
+
+                // обновляем каждый select
+                selects.forEach(sel => {
+                    let currentValue = sel.value;
+
+                    Array.from(sel.options).forEach(option => {
+
+                        if (option.value === "") return;
+
+                        if (selectedValues.includes(option.value) && option.value !== currentValue) {
+                            option.disabled = true;
+                        } else {
+                            option.disabled = false;
+                        }
+
+                    });
+
+                });
+
+            }
+    </script>
+
+    <script>
+        
+        let isLogin = false;
+
+        function toggleForms() {
+            const reg = document.getElementById("registerForm");
+            const log = document.getElementById("loginForm");
+            const btn = document.getElementById("toggleBtn");
+            const title = document.getElementById("mainTitle");
+
+            if (!isLogin) {
+                reg.classList.add("hidden-form");
+                log.classList.remove("hidden-form");
+                btn.textContent = "Create Character";
+                title.textContent = "Enter Skyrim";
+                isLogin = true;
+            } else {
+                log.classList.add("hidden-form");
+                reg.classList.remove("hidden-form");
+                btn.textContent = "Login";
+                title.textContent = "Create Your Character";
+                isLogin = false;
+            }
+        }
+
+        function showWeaponOptions() {
+            let value = document.getElementById("weaponClass").value;
+
+            document.querySelectorAll(".sub-options").forEach(el => {
+                el.classList.remove("visible");
+                el.classList.add("hidden");
+            });
+
+            if (value === "one") {
+                document.getElementById("oneOptions").classList.add("visible");
+            }
+            if (value === "two") {
+                document.getElementById("twoOptions").classList.add("visible");
+            }
+            if (value === "archery") {
+                document.getElementById("archeryOptions").classList.add("visible");
+            }
+            if (value === "magic") {
+                document.getElementById("magicOptions").classList.add("visible");
+            }
+        }
+    </script>
+
+<!-- AI  button-->
+<script>
+    document.getElementById('generateBtn').addEventListener('click', function () {
+            const name = document.querySelector('input[name="character_name"]').value;
+
+            if (!name) {
+                alert("Please enter a character name first!");
+                return;
+            }
+
+            fetch('/generate_story.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ character_name: name })
+            })
+                .then(res => {
+                    if (!res.ok) throw new Error('Network response was not ok');
+                    return res.json();
+                })
+                .then(data => {
+                    // Проверяем, что пришло: data.text или data.story
+                    document.getElementById('backstory').value = data.text || data.story || "Error";
+                })
+                .catch(err => console.error('Error generating story:', err));
+        });
+
+/*    document.getElementById('generateBtn').addEventListener('click', function () {
+        const name = document.querySelector('input[name="character_name"]').value;
+        
+        fetch('generate_story.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ character_name: nameField.value })
+        })
+            .then(res => res.json())
+            .then(data => {
+                document.querySelector('textarea[name="backstory"]').value = data.story;
+            })
+            .catch(err => console.error('Error generating story:', err));
+    });
+*/
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyrim History</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "IM Fell English SC", serif;
+            color: #e0e0e0;
+            background: black;
+            overflow-x: hidden;
+        }
+
+        /* PARALLAX */
+
+        .parallax-container {
+            position: relative;
+            height: 110vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* VIGNETTE */
+
+        .parallax-container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: radial-gradient(ellipse at center,
+                    rgba(0, 0, 0, 0) 40%,
+                    rgba(0, 0, 0, 0.6) 100%);
+
+            z-index: 6;
+            pointer-events: none;
+        }
+
+        /* LAYERS */
+
+        .layer {
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+
+            background-size: cover;
+            background-position: center;
+
+            will-change: transform;
+        }
+
+        .layer-1 {
+            background-image: url('../pic/parallax/Parallax1.png')
+        }
+
+        
+
+        .layer-3 {
+            background-image: url('../pic/parallax/Parallax3.png')
+        }
+
+        .layer-4 {
+            background-image: url('../pic/parallax/Parallax4.png')
+        }
+
+        .layer-5 {
+            background-image: url('../pic/parallax/Parallax5.png')
+        }
+
+        .layer-6 {
+            background-image: url('../pic/parallax/Parallax6.png')
+        }
+
+        /* TITLE */
+
+        .main-title {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, 60px);
+
+            font-family: 'Cinzel', serif;
+            font-size: 8vw;
+            letter-spacing: 1rem;
+
+            color: white;
+            text-shadow: 0 0 40px black;
+
+            opacity: 0;
+
+            transition: all 1.5s cubic-bezier(.22, 1, .36, 1);
+
+            z-index: 10;
+            pointer-events: none;
+
+        }
+
+        .main-title.show {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        /* FADE */
+
+        .fade-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 160px;
+
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 0.6),
+                    black);
+
+            z-index: 8;
+        }
+
+        /* CONTENT */
+
+        .content-section {
+
+            padding: 120px 6%;
+            max-width: 1200px;
+            margin: auto;
+
+            font-size: 1.4rem;
+            line-height: 1.8;
+
+            text-align: justify;
+            text-align-last: center;
+
+        }
+
+        /* BLURRED BACKGROUND */
+
+        .content-section::before {
+
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-image: url('../pic/parallax/Parallax1.png');
+            background-size: cover;
+            background-position: center;
+
+            filter: blur(30px) brightness(0.25);
+
+            transform: scale(1.2);
+
+            z-index: -1;
+
+        }
+
+        /* HEADINGS */
+
+        .content-section h2 {
+
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+
+            margin-top: 80px;
+            margin-bottom: 30px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+        /* TEXT */
+
+        .content-section p {
+            margin-bottom: 25px;
+        }
+
+        /* REVEAL */
+
+        .reveal {
+
+            opacity: 0;
+            transform: translateY(60px);
+
+            transition: all 1.2s cubic-bezier(.22, 1, .36, 1);
+
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* BACK BUTTON */
+
+        .back-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#2d2d2d;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:16px;
+    text-decoration:none;
+    transition:0.3s;
+    z-index:50;
+}
+
+.back-btn:hover{
+    background:#444;
+    transform:scale(1.05);
+}
+
+    </style>
+</head>
+
+<body>
+
+    <section class="parallax-container">
+
+        <div class="layer layer-1" data-speed="0.1"></div>
+        <div class="layer layer-3" data-speed="0.3"></div>
+
+        <h1 class="main-title" id="title">History</h1>
+
+        <div class="layer layer-4" data-speed="0.5"></div>
+        <div class="layer layer-5" data-speed="0.7"></div>
+        <div class="layer layer-6" data-speed="1"></div>
+
+        <div class="fade-overlay"></div>
+
+    </section>
+
+    <section class="content-section">
+
+        <div id="story"></div>
+
+        <a href="../index.html" class="back-btn">Main Page</a>
+
+    </section>
+
+    <script>
+
+        /* TITLE ANIMATION */
+
+        window.addEventListener("load", () => {
+            document.getElementById("title").classList.add("show");
+        });
+
+        /* LOAD JSON */
+
+        fetch("../history_of_tamriel.json")
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById("story");
+
+                    // Теперь проходим по массиву eras
+                    data.eras.forEach(era => {
+                        // Создаем заголовок Эры
+                        const eraTitle = document.createElement("h1");
+                        eraTitle.textContent = era.name;
+                        container.appendChild(eraTitle);
+
+                        // Проходим по секциям внутри конкретной эры
+                        era.sections.forEach(section => {
+                            const h2 = document.createElement("h2");
+                            h2.textContent = section.title;
+                            h2.classList.add("reveal");
+
+                            const p = document.createElement("p");
+                            p.textContent = section.content; // В вашем JSON поле называется "content", а не "text"
+                            p.classList.add("reveal");
+
+                            container.appendChild(h2);
+                            container.appendChild(p);
+
+                            observer.observe(h2);
+                            observer.observe(p);
+                        });
+                    });
+                })
+                .catch(err => console.error("Ошибка загрузки:", err));
+
+        /* PARALLAX */
+
+        window.addEventListener("scroll", () => {
+
+            let scrollY = window.scrollY;
+
+            document.querySelectorAll(".layer").forEach(layer => {
+
+                let speed = layer.dataset.speed;
+                layer.style.transform = `translateY(${scrollY * speed}px)`;
+
+            });
+
+        });
+
+        /* REVEAL SCROLL */
+
+        const observer = new IntersectionObserver(entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+
+            });
+
+        }, { threshold: 0.15 });
+
+    </script>
+
+</body>
+
+</html>

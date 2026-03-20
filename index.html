@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skyrim Encyclopedia - Main Page</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/index.css">
+
+</head>
+
+<body>
+
+ <!-- NAVIGATION -->
+<nav class="side-menu">
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="../index.html">Main page</a></li>
+        <li><a href="../pages/history.html">History of Skyrim</a></li>
+        <li><a href="../pages/map.html">Map</a></li>
+        <li><a href="../pages/races.html">Races</a></li>
+        <li><a href="../pages/skills.html">Skills & Perks</a></li>
+        <li><a href="../pages/guilds.html">Guilds</a></li>
+        <li><a href="../pages/bestiary.html">Bestiary</a></li>
+
+    </ul>
+    <a href="../pages/generator.html" class="btn-generator-nav">Create Your Character</a>
+</nav>
+
+
+ <!--   <main class="content">
+        <p>
+            Welcome to the Skyrim Encyclopedia — a handcrafted collection of lore, races, guilds, magic,
+            dragons, artifacts, and the deep history of Tamriel and the Northern Province. Explore the world
+            of The Elder Scrolls V: Skyrim with atmospheric design and immersive presentation.
+        </p>
+        --> 
+    </main>
+
+    <div class="cursor-glow"></div>
+
+    <script>
+
+        document.addEventListener("mousemove", (e) => {
+
+            const x = e.clientX;
+            const y = e.clientY;
+
+            /* создаём несколько снежинок для длинного хвоста */
+
+            for (let i = 0; i < 3; i++) {
+
+                const snow = document.createElement("div");
+                snow.className = "snow-particle";
+
+                const size = Math.random() * 10 + 4;
+                const offsetX = (Math.random() - 0.5) * 20;
+                const offsetY = (Math.random() - 0.5) * 20;
+
+                snow.style.width = size + "px";
+                snow.style.height = size + "px";
+
+                snow.style.left = (x + offsetX) + "px";
+                snow.style.top = (y + offsetY) + "px";
+
+                /* эффект ветра */
+
+                const wind = (Math.random() - 0.5) * 60 + "px";
+                snow.style.setProperty("--windX", wind);
+
+                document.body.appendChild(snow);
+
+                setTimeout(() => {
+                    snow.remove();
+                }, 1600);
+            }
+
+            /* ледяные искры */
+
+            if (Math.random() > 0.5) {
+
+                const spark = document.createElement("div");
+                spark.className = "ice-spark";
+
+                spark.style.left = x + "px";
+                spark.style.top = y + "px";
+
+                const wind = (Math.random() - 0.5) * 40 + "px";
+                spark.style.setProperty("--windX", wind);
+
+                document.body.appendChild(spark);
+
+                setTimeout(() => {
+                    spark.remove();
+                }, 1000);
+            }
+
+        });
+
+    </script>
+</body>
+</html>

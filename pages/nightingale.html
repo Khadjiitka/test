@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Psijic Order</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap"
+        rel="stylesheet">
+    <link rel="style" href="../style/style.css">
+    <link rel="style" href="../style/nightingale.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel', serif;
+            background: url('../pic/dark_fog.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+
+        .background-fog {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(2px);
+            z-index: -1;
+        }
+
+        /* NAVIGATION */
+        .side-menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.85);
+            padding: 20px;
+            border-right: 2px solid #555;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);
+            z-index: 10;
+        }
+
+        .side-menu h2 {
+            text-align: center;
+            color: #ddd;
+            font-size: 22px;
+            font-family: "IM Fell English SC", serif;
+            margin-bottom: 25px;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-menu ul li {
+            margin: 12px 0;
+        }
+
+        .side-menu ul li a {
+            color: #cfcfcf;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+            display: block;
+            padding: 4px 0;
+        }
+
+        .side-menu ul li a:hover {
+            color: white;
+            margin-left: 6px;
+        }
+
+        .btn-generator-nav {
+            display: block;
+            margin-top: 30px;
+            padding: 12px;
+            background: #2d2d2d;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn-generator-nav:hover {
+            background: #444;
+            transform: scale(1.05);
+        }
+
+        /* CONTENT */
+        .content {
+            margin-left: 300px;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-shadow: 0 0 8px black;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* GALLERY FIXED (vertical format) */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            width: 48%;
+            height: 450px;
+            /* ВЫСОТА — вертикальная */
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Нормальное заполнение */
+            object-position: center;
+            transition: filter 0.4s, transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            filter: blur(3px);
+            transform: scale(1.03);
+        }
+
+        .gallery-info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 14px;
+            background: rgba(0, 0, 0, 0.65);
+            font-size: 18px;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #2d2d2d;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #444;
+            transform: scale(1.05);
+        }
+        /* NIGHTINGALE QUOTE BLOCK */
+.night-quote {
+    position: relative;
+    margin: 40px 0;
+    padding: 35px 30px;
+    background: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0.85),
+        rgba(10, 10, 10, 0.95)
+    );
+    border-left: 3px solid silver;
+    border-right: 3px solid silver;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(200, 200, 255, 0.15);
+}
+
+.night-quote p {
+    font-family: "IM Fell English SC", serif;
+    font-size: 24px;
+    line-height: 1.8;
+    color: #e8e8e8;
+    text-shadow: 0 0 6px rgba(150,150,200,0.4);
+    margin: 0;
+}
+
+
+.quote-author {
+    margin-top: 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #bbb;
+    text-transform: uppercase;
+}
+    </style>
+</head>
+
+<body>
+    <div class="background-fog"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="side-menu">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="../index.html">Main page</a></li>
+            <li><a href="../pages/history.html">History of Skyrim</a></li>
+            <li><a href="../pages/map.html">Map</a></li>
+            <li><a href="../pages/races.html">Races</a></li>
+            <li><a href="../pages/skills.html">Skills & Perks</a></li>
+            <li><a href="../pages/guilds.html">Guilds</a></li>
+            <li><a href="../pages/bestiary.html">Bestiary</a></li>
+
+        </ul>
+        <a href="../pages/generator.html" class="btn-generator-nav">Create Your Character</a>
+    </nav>
+
+
+    <div class="content">
+        <h1>Nightingales</h1>
+
+        <p>The Nightingales are a secret inner circle within the Thieves Guild, based in Nightingale Hall. The most recent
+        incarnation of the faction was made up of three elite thieves: Mercer Frey, Karliah, and Gallus Desidenius. The
+        Nightingales exist to protect the shrines of the Daedric Prince Nocturnal throughout Skyrim. It is common belief that
+        the Nightingales do not exist, and were simply created as a way to scare Footpads into doing what they are told.</p>
+
+
+        <div class="night-quote">
+            
+            <p>
+                "In the name of Nocturnal, Lady of the Night,
+                I dedicate myself to the shadows. <br>
+                May my steps be silent, my blade swift, and my loyalty eternal."
+            </p>
+            <div class="quote-author">— Oath of the Nightingales</div>
+        </div>
+
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../pic/guilds/Nocturnal.webp" alt="Nokturnal">
+                <div class="gallery-info">Nocturnal is the
+                Daedric Prince whose sphere is the night,
+                darkness and mystery. She is also known as the Night Mistress and Lady Luck.</div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../pic/guilds/Solovyi.jpg" alt="NightiangaleArmor">
+                <div class="gallery-info"> Nightingale Armor </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="../pages/guilds.html" class="back-btn">Back</a>
+</body>
+
+</html>

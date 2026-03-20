@@ -1,0 +1,370 @@
+{
+  "title": "The Complete History of Tamriel",
+  "subtitle": "A Comprehensive Chronicle from the Dawn Era to the Fourth Era",
+  "quote": "Before the Ages of Man, the et'Ada — the original spirits — shaped the world. What followed was history, myth, war, empire, and legend intertwined across thousands of years.",
+  "eras": [
+    {
+      "id": "dawn_era",
+      "name": "The Dawn Era",
+      "subtitle": "Before Time, Before History",
+      "period": "Before recorded time",
+      "overview": "The mythological age before mortal history, in which the gods created the world and the fundamental forces of the universe were established.",
+      "sections": [
+        {
+          "title": "The Creation of Mundus",
+          "content": "In the beginning, there was no world. There was only Aetherius — the realm of pure magic and immortality — and Oblivion — the infinite void, home of chaos and the Daedric Princes. The great cosmic forces of creation were embodied by two supreme spirits: Anu (the force of stasis, order, and light) and Padomay (the force of change, chaos, and darkness). Their interplay gave rise to all things. From Anu came the soul Anui-El, and from Anui-El came Auri-El — the spirit who became the Elvish god of time and the sun. From Padomay came Sithis — the void and the embodiment of entropy. Between these polarities arose the et'Ada — the original spirits — among the most powerful of which were the Aedra (who would sacrifice themselves to create the world) and the Daedra (who refused sacrifice and retreated to Oblivion).",
+          "key_figures": ["Anu", "Padomay", "Auri-El", "Sithis"],
+          "key_concepts": ["Aetherius", "Oblivion", "et'Ada", "Aedra", "Daedra"]
+        },
+        {
+          "title": "Lorkhan and the Mortal Plane",
+          "content": "Among the et'Ada was Lorkhan — called Shor by Nords, Lorkhaj by Khajiit, Sep by Redguards — a trickster-spirit of ambition and wandering. Lorkhan conceived a plan to create a mortal plane, a world between Aetherius and Oblivion where the et'Ada could experience limitation, growth, and meaning. Each spirit who contributed to the creation of Mundus sacrificed a portion of their divine nature, becoming planets, moons, and stars. When spirits realized the full cost of sacrifice, they were furious. Auri-El led the charge against Lorkhan. The et'Ada tore out Lorkhan's divine heart and cast it to the mortal world. His body became the two moons of Nirn: Masser and Secunda. Lorkhan's Heart fell to Vvardenfell, embedding itself beneath Red Mountain — it would play a central role in history thousands of years later.",
+          "key_figures": ["Lorkhan", "Auri-El"],
+          "key_concepts": ["Mundus", "Heart of Lorkhan", "Masser", "Secunda", "Red Mountain"]
+        },
+        {
+          "title": "The Earthbones and the Shaping of Nirn",
+          "content": "Many spirits who chose to help shape the world became the Earthbones — the fundamental laws of nature, physics, and life. They became so embedded in the world that they ceased to be truly divine and became the very rules by which Nirn operated: gravity, seasons, the cycle of life and death. The planet Nirn was formed with its massive continent Tamriel at the center, surrounded by seas. The continents of Akavir (east), Atmora (north), Yokuda (west), and Pyandonea (south) also existed.",
+          "key_concepts": ["Earthbones", "Nirn", "Tamriel", "Akavir", "Atmora", "Yokuda", "Pyandonea"]
+        },
+        {
+          "title": "The Daedric Princes",
+          "content": "Those et'Ada who refused to participate in the creation of Mundus remained in Oblivion, each carving out their own infinite pocket realm. These became the Daedric Princes — immensely powerful beings who could not truly die but who regarded mortals primarily as amusement or tools.",
+          "key_figures": [
+            { "name": "Mehrunes Dagon", "domains": ["destruction", "revolution", "ambition"] },
+            { "name": "Molag Bal", "domains": ["domination", "enslavement", "corruption"] },
+            { "name": "Azura", "domains": ["dusk and dawn", "fate", "prophecy"] },
+            { "name": "Boethiah", "domains": ["deceit", "conspiracy", "betrayal"] },
+            { "name": "Mephala", "domains": ["secrets", "murder", "manipulation"] },
+            { "name": "Hermaeus Mora", "domains": ["knowledge", "memory", "fate"] },
+            { "name": "Sheogorath", "domains": ["madness", "creativity", "the unknown"] },
+            { "name": "Nocturnal", "domains": ["night", "darkness", "thieves"] },
+            { "name": "Meridia", "domains": ["life energy", "opposition to undead"] },
+            { "name": "Namira", "domains": ["ancient darkness", "revulsion", "cannibalism"] },
+            { "name": "Sanguine", "domains": ["hedonism", "debauchery", "indulgence"] },
+            { "name": "Vaermina", "domains": ["dreams", "nightmares", "terror"] },
+            { "name": "Malacath", "domains": ["the ostracized", "orcs", "the spurned"] },
+            { "name": "Peryite", "domains": ["tasks", "natural order", "pestilence"] },
+            { "name": "Clavicus Vile", "domains": ["wishes", "bargains", "trickery"] },
+            { "name": "Hircine", "domains": ["the hunt", "sport", "lycanthropy"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "merethic_era",
+      "name": "The Merethic Era",
+      "subtitle": "The Age of Elves",
+      "period": "ME 2500 — ME 1",
+      "overview": "The era of Elven dominance over Tamriel, before the arrival of Men in significant numbers. Ancient races established their civilizations, and the foundations of all later conflict were laid.",
+      "sections": [
+        {
+          "title": "The Aldmer: The First People",
+          "content": "The first mortal beings to walk Tamriel were the Aldmer — the First Folk, or Elves. They came from the mythical island of Aldmeris and spread across Tamriel over thousands of years. They were tall, long-lived, highly intelligent beings with an innate connection to magic. Over millennia, the Aldmer diverged into distinct elven races shaped by their environments and beliefs.",
+          "elven_races": [
+            { "name": "Chimer", "later_became": "Dunmer", "homeland": "Morrowind", "note": "Followed the prophet Veloth, worshipped Daedra" },
+            { "name": "Dwemer", "also_known_as": "Deep Elves / Dwarves", "homeland": "Underground — Morrowind, Skyrim, Hammerfell", "note": "Rejected religion in favor of science and reason" },
+            { "name": "Falmer", "also_known_as": "Snow Elves", "homeland": "Skyrim", "note": "Settled the frozen north, later devolved under the Dwemer" },
+            { "name": "Bosmer", "also_known_as": "Wood Elves", "homeland": "Valenwood", "note": "Adopted the Green Pact with nature" },
+            { "name": "Altmer", "also_known_as": "High Elves", "homeland": "Summerset Isles", "note": "Remained most genetically and culturally pure" },
+            { "name": "Orsimer", "also_known_as": "Orcs", "homeland": "Various (later Orsinium)", "note": "Transformed and cursed when their god Trinimac was devoured by Boethiah" },
+            { "name": "Ayleids", "also_known_as": "Wild Elves / Heartland High Elves", "homeland": "Cyrodiil", "note": "Built the White-Gold Tower and enslaved early Men" }
+          ]
+        },
+        {
+          "title": "The Ayleids and the White-Gold Tower",
+          "content": "In Cyrodiil, the Ayleids built a magnificent civilization. Their greatest achievement was the White-Gold Tower — a massive metaphysical structure designed to emulate the Adamantine Tower, the first structure ever built on Nirn. The Ayleids practiced complex Daedric and Aedric magical traditions and enslaved the primitive Nede (proto-humans, ancestors of the Imperials) who had migrated to Cyrodiil from Atmora.",
+          "key_locations": ["White-Gold Tower", "Cyrodiil"],
+          "key_concepts": ["Adamantine Tower", "Nede slaves"]
+        },
+        {
+          "title": "The Dwemer: Masters of the Deep",
+          "content": "The Dwemer built extraordinary underground cities filled with brass automata, steam-powered machinery, and Aetherium constructs. They were perhaps the greatest inventors and engineers Tamriel ever produced. Uniquely atheistic, they rejected the divinity of the Aedra and Daedra, studying instead the nature of tonal architecture — the idea that reality's fundamental laws are expressed as sound and vibration, and that one with sufficient knowledge could alter those laws. Persistent conflict with the Chimer (who had settled the same region) defined much of their existence.",
+          "key_concepts": ["Tonal Architecture", "Aetherium", "Brass Automata"],
+          "key_locations": ["Blackreach", "Nchuand-Zel", "Dwemer underground cities"]
+        },
+        {
+          "title": "The Falmer: The Snow Elves' Tragedy",
+          "content": "The Falmer — Snow Elves — built an advanced civilization in Skyrim, including the great cathedral Auri-El's Chantry. Their downfall began when the Atmorans (ancestors of the Nords) arrived from Atmora. After the Night of Tears — a catastrophic Snow Elf attack on the human settlement of Saarthal — the great Atmoran leader Ysgramor returned with his Five Hundred Companions and systematically drove the Snow Elves from Skyrim. The few survivors fled to the Dwemer, who agreed to shelter them but forced them to eat a toxic fungus that blinded and devolved them over generations into the bestial Falmer known in later eras. One Snow Elf — Knight-Paladin Gelebor — refused this fate, remaining in Auri-El's Chantry in near-stasis for thousands of years.",
+          "key_figures": ["Ysgramor", "Knight-Paladin Gelebor"],
+          "key_events": ["Night of Tears", "The Five Hundred Companions"],
+          "key_locations": ["Saarthal", "Auri-El's Chantry"]
+        },
+        {
+          "title": "The Dragon War",
+          "content": "The Dragon War was the rebellion of humanity against dragonkind. The dragon Alduin and his kin ruled over early Nord civilization, demanding worship and tribute. Human Dragon Priests served as intermediaries, wielding terrifying power. The dragon Paarthurnax — Alduin's lieutenant and brother — defected to humanity's side and taught the ancient Nords the Way of the Voice (the Thu'um). The heroes Hakon One-Eye, Gormlaith Golden-Hilt, and Felldir the Old led the revolt. Unable to kill Alduin outright, they used an Elder Scroll to cast him forward through time. Paarthurnax founded High Hrothgar and the Greybeards afterward.",
+          "key_figures": ["Alduin", "Paarthurnax", "Hakon One-Eye", "Gormlaith Golden-Hilt", "Felldir the Old"],
+          "key_concepts": ["Thu'um / Way of the Voice", "Dragon Priests", "Elder Scroll"],
+          "key_locations": ["Throat of the World", "High Hrothgar"]
+        }
+      ]
+    },
+    {
+      "id": "first_era",
+      "name": "The First Era",
+      "subtitle": "Rise of Men and Empires",
+      "period": "1E 1 — 1E 2920",
+      "overview": "The age in which humanity rose to challenge Elvish dominance. Great empires formed and fell, the Dwemer vanished, and the foundations of the modern world were laid.",
+      "sections": [
+        {
+          "title": "The Nordic Expansion",
+          "date": "Early 1E",
+          "content": "The First Era began when the Nordic king Harald unified the scattered Atmoran-descended clans of Skyrim and launched expansionist campaigns. The Nords spread their dominion across much of Tamriel, pushing against the Elven civilizations. Nordic dragon cults flourished during this period as ancient dragons dominated human societies through the power of the Thu'um.",
+          "key_figures": ["King Harald"],
+          "key_locations": ["Skyrim", "High Rock", "Cyrodiil"]
+        },
+        {
+          "title": "The Alessian Revolt",
+          "date": "1E 242",
+          "content": "In Cyrodiil, the human slaves known as the Nedes had suffered under Ayleid rule for generations. The revolution was sparked by Alessia, a slave-woman who claimed divine visions and the blessing of Akatosh. Allied with Nordic armies, she led a successful revolt against the Ayleid city-states. Alessia became the first Empress of the Alessian Empire, ruling from the White-Gold Tower. She created a syncretic religion combining Aedric and Nordic pantheons — the forerunner of the Eight Divines. The Amulet of Kings — a covenant between Alessia and Akatosh — was forged, creating a barrier between Mundus and Oblivion that would persist as long as a Dragonborn emperor sat on the throne.",
+          "key_figures": ["Alessia", "Akatosh"],
+          "key_artifacts": ["Amulet of Kings"],
+          "significance": "First human empire in Cyrodiil; foundation of the Divine Covenant protecting Mundus from Oblivion"
+        },
+        {
+          "title": "The Alessian Order and Theocratic Tyranny",
+          "date": "1E 300s–800s",
+          "content": "After Alessia's death, her empire was eventually dominated by the fanatical Alessian Order, founded by the monk Marukh. The Order preached extreme monotheism and persecuted both Elven and syncretic religious traditions. Its Exclusionary Mandates barred Elves from trading in Imperial markets. The Order grew increasingly totalitarian, eventually controlling the empire itself. It was ultimately broken at the Battle of Glenumbria Moors (1E 482), where a coalition of Direnni Elves and Breton and Nordic forces crushed its armies.",
+          "key_figures": ["Marukh"],
+          "key_events": ["Battle of Glenumbria Moors — 1E 482"],
+          "key_concepts": ["Exclusionary Mandates", "Alessian Doctrines"]
+        },
+        {
+          "title": "The Battle of Red Mountain",
+          "date": "1E 700",
+          "content": "The greatest cataclysm of the First Era came from Morrowind. The Dwemer tonemaster Kagrenac discovered that the Heart of Lorkhan still pulsed with divine power beneath Red Mountain. He devised three sacred tools — Sunder, Keening, and Wraithguard — to tap the Heart's power and transform his people into living gods. The Chimer leader Nerevar Indoril discovered this and confronted Kagrenac. The Battle of Red Mountain erupted between Chimer and Dwemer. When Kagrenac struck the Heart with his tools, all the Dwemer vanished simultaneously everywhere in the world — their fate remains Tamriel's greatest mystery. Nerevar was mortally wounded. The Tribunal — Vivec, Almalexia, and Sotha Sil — then used Kagrenac's Tools on the Heart themselves, ascending to godhood against Nerevar's wishes. Azura's fury was total: she cursed the entire Chimer race, turning their golden skin grey and their eyes red. They became the Dunmer. Azura also prophesied the Nerevarine — Nerevar's reincarnation — who would one day challenge the Tribunal's power.",
+          "key_figures": ["Kagrenac", "Nerevar Indoril", "Vivec", "Almalexia", "Sotha Sil", "Dumac Dwarfking", "Azura"],
+          "key_artifacts": ["Sunder", "Keening", "Wraithguard", "Heart of Lorkhan"],
+          "key_events": ["Disappearance of the Dwemer", "Chimer cursed into Dunmer", "Tribunal formed"],
+          "significance": "The Dwemer vanished; the Tribunal became gods; the Chimer became Dunmer; set the stage for events 2,700 years later in the Third Era"
+        },
+        {
+          "title": "The Reman Dynasty and the Second Empire",
+          "date": "1E 2703",
+          "content": "The Akaviri Invasion of 1E 2703 reshaped the continent. Warriors from Akavir invaded through Skyrim. At Pale Pass in the Jerall Mountains, they were confronted by Reman Cyrodiil, a mysterious Dragonborn man. Recognizing him as Dragonborn, the Akaviri armies immediately surrendered and knelt before him. Reman forged the Second Empire — a genuinely expansionist military power that brought Cyrodiil, Skyrim, High Rock, Hammerfell, and parts of Morrowind under Imperial rule. The Akaviri Potentates became crucial advisors. The dynasty ended when Emperor Reman III and his heir were assassinated by the Morag Tong, after which the Akaviri Potentate Versidue-Shaie assumed power.",
+          "key_figures": ["Reman Cyrodiil", "Reman III", "Versidue-Shaie"],
+          "key_events": ["Akaviri Invasion 1E 2703", "Pale Pass surrender"],
+          "significance": "Established the Second Empire and Akaviri-Imperial cultural fusion that would define Tamriel's military tradition"
+        }
+      ]
+    },
+    {
+      "id": "second_era",
+      "name": "The Second Era",
+      "subtitle": "The Interregnum and the Forgotten Crown",
+      "period": "2E 1 — 2E 896",
+      "overview": "An era of chaos following the collapse of the Reman Empire. The Interregnum saw nearly 400 years of war and fragmentation, culminating in Tiber Septim's unification of Tamriel.",
+      "sections": [
+        {
+          "title": "The Akaviri Potentate and the Rise of the Guilds",
+          "date": "2E 1–430",
+          "content": "The Akaviri Potentates Versidue-Shaie and later Savirien-Chorak ruled competently but were increasingly resented. One of their most lasting contributions was the Guilds Act (2E 321), which officially authorized the creation of multi-province guilds with legal standing across the Empire — giving rise to the Fighters Guild and Mages Guild as continent-spanning institutions. Versidue-Shaie was assassinated by the Morag Tong in 2E 324. In 2E 430, the last Akaviri Potentate and all his heirs were killed in a single night. The Second Empire collapsed. Tamriel entered the Interregnum — nearly 400 years of chaos.",
+          "key_figures": ["Versidue-Shaie", "Savirien-Chorak"],
+          "key_events": ["Guilds Act 2E 321", "End of Akaviri Potentate 2E 430"],
+          "key_concepts": ["Fighters Guild", "Mages Guild"]
+        },
+        {
+          "title": "The Interregnum — An Age of Chaos",
+          "date": "2E 430–864",
+          "content": "With no central authority, Tamriel fractured into dozens of warring kingdoms and alliances. This period saw plague, famine, and constant war across most of the continent. The rise and fall of countless petty kings and warlords defined the era. The Reachmen in the Reach (western Skyrim/High Rock borderlands) became a persistent destabilizing force. The arch-necromancer Mannimarco — the King of Worms — grew in power during this chaotic period, gathering undead armies. The three great alliances of the era slowly took shape.",
+          "key_figures": ["Mannimarco"],
+          "key_groups": ["Reachmen", "Ebonheart Pact", "Aldmeri Dominion", "Daggerfall Covenant"]
+        },
+        {
+          "title": "The Planemeld and Molag Bal's Invasion",
+          "date": "2E 582",
+          "content": "The central crisis of the Second Era was the Planemeld — the Daedric Prince Molag Bal's attempt to merge Nirn with his Oblivion plane, Coldharbour. His plan involved planting massive Dark Anchor structures across Tamriel to drag Nirn into Coldharbour. The arch-necromancer Mannimarco had allied with the would-be Emperor Varen Aquilarios in a scheme to relight the Dragonfires of the White-Gold Tower. However, Mannimarco had secretly made a deal with Molag Bal. He corrupted the ritual, shattering the covenant with Akatosh entirely — an event called the Soulburst — which broke the barrier between Mundus and Oblivion and enabled the Planemeld to begin. The Vestige (the player character of ESO), who had their soul stolen by Molag Bal, fought through the three-faction Alliance War while working to stop the Planemeld. The Daedric invasion was ultimately contained, but the three alliances continued fighting each other.",
+          "key_figures": ["Molag Bal", "Varen Aquilarios", "Mannimarco", "Queen Ayrenn", "High King Emeric"],
+          "key_events": ["The Soulburst", "Dark Anchors placed across Tamriel", "Planemeld defeated"],
+          "three_alliances": [
+            {
+              "name": "Ebonheart Pact",
+              "members": ["Nords of Skyrim", "Dunmer of Morrowind", "Argonians of Black Marsh"],
+              "leader": "Various"
+            },
+            {
+              "name": "Aldmeri Dominion",
+              "members": ["Altmer of Summerset", "Bosmer of Valenwood", "Khajiit of Elsweyr"],
+              "leader": "Queen Ayrenn"
+            },
+            {
+              "name": "Daggerfall Covenant",
+              "members": ["Bretons of High Rock", "Redguards of Hammerfell", "Orcs"],
+              "leader": "High King Emeric"
+            }
+          ]
+        },
+        {
+          "title": "Tiber Septim and the Founding of the Third Empire",
+          "date": "2E 852–896",
+          "content": "The chaos of the Interregnum was ended by Talos, known in history as Tiber Septim — born as Hjalti Early-Beard. He was a Dragonborn military commander who united the warring Nord kingdoms, defeated the Camoran Usurper of Valenwood, conquered High Rock and Hammerfell, and received the great Numidium — the brass god, a colossal automaton originally built by the Dwemer — from the battlemage Zurin Arctus and the Dunmer master Vivec (who surrendered his power willingly). Using Numidium, Tiber Septim crushed the Aldmeri Dominion and conquered Summerset and Valenwood. Morrowind surrendered diplomatically via the Armistice rather than being conquered outright. In 2E 896, Tiber Septim was crowned Emperor of All Tamriel. The Third Era began. After his death, Tiber Septim was apotheosized as the god Talos — the ninth divine, patron of mankind, war, and governance.",
+          "key_figures": ["Tiber Septim / Talos", "Zurin Arctus", "Vivec"],
+          "key_artifacts": ["Numidium (the Brass God)"],
+          "key_events": ["Conquest of Tamriel", "Armistice with Morrowind", "Coronation 2E 896", "Apotheosis of Talos"],
+          "significance": "Unified all of Tamriel under one empire for the first time; established the Third Era and the Septim Dynasty"
+        }
+      ]
+    },
+    {
+      "id": "third_era",
+      "name": "The Third Era",
+      "subtitle": "The Septim Dynasty",
+      "period": "3E 1 — 3E 433",
+      "overview": "The age of the Septim Empire — Tamriel's longest period of relative peace and unity. It ended in catastrophe when the Septim bloodline was extinguished and Mehrunes Dagon invaded the mortal world.",
+      "sections": [
+        {
+          "title": "The Height of the Septim Empire",
+          "date": "3E 1–400",
+          "content": "Under the Septim dynasty, Tamriel experienced its longest period of relative peace and prosperity. The Eight Divines (plus Talos) religion unified much of the continent. The Imperial City became the cultural and political heart of the world. Key emperors included Tiber Septim himself, followed by a series of successors — some capable, some troubled. Notably, Pelagius Septim III (known as Pelagius the Mad) became legendary for his insanity before dying young.",
+          "key_figures": ["Tiber Septim", "Pelagius the Mad"],
+          "key_institutions": ["Eight Divines Church", "The Blades", "Imperial Legion"]
+        },
+        {
+          "title": "The Eternal Champion and the Staff of Chaos",
+          "date": "3E 389",
+          "content": "Emperor Uriel Septim VII was imprisoned in Oblivion by the treacherous Imperial Battlemage Jagar Tharn, who assumed the Emperor's identity for years. The Eternal Champion assembled the shattered Staff of Chaos from pieces hidden across Tamriel, freed the Emperor, and defeated Jagar Tharn in the Imperial Palace.",
+          "key_figures": ["Uriel Septim VII", "Jagar Tharn", "Eternal Champion"],
+          "key_artifacts": ["Staff of Chaos"],
+          "game": "The Elder Scrolls I: Arena"
+        },
+        {
+          "title": "The Warp in the West (Miracle of Peace)",
+          "date": "3E 417",
+          "content": "The reconstructed Numidium was contested among six factions in High Rock. Through a Dragon Break — a fracture in linear time — all six factions received the Totem of Tiber Septim simultaneously. Numidium activated and rampaged for days, causing massive destruction. When the Dragon Break resolved, the fractured kingdoms of High Rock had merged into four larger, more stable kingdoms: Daggerfall, Wayrest, Sentinel, and Orsinium.",
+          "key_events": ["Dragon Break", "Numidium's rampage", "Unification of High Rock"],
+          "key_concepts": ["Dragon Break", "Totem of Tiber Septim"],
+          "game": "The Elder Scrolls II: Daggerfall"
+        },
+        {
+          "title": "Morrowind and the Tribunal's Twilight",
+          "date": "3E 427",
+          "content": "By the late Third Era, the power of the Tribunal — the living gods Vivec, Almalexia, and Sotha Sil — was fading. Lorkhan's Heart (the source of their divine power) was weakening. Almalexia had grown paranoid and violent. Sotha Sil had withdrawn entirely into his Clockwork City. Vivec barely held the Floating Ministry — a meteor he had suspended over Vivec City for centuries — in place. A prisoner arrived in Morrowind identified by Azura as the Nerevarine, the reincarnation of Nerevar. The Nerevarine discovered the truth of the Tribunal's origins, acquired Kagrenac's Tools, and ultimately destroyed the Heart of Lorkhan, severing the Tribunal's connection to divinity permanently. Dagoth Ur — an ancient Chimer lord who had also tapped into the Heart's power — was defeated as his citadel collapsed. Vivec faded. Almalexia was slain by the Nerevarine in her madness. Sotha Sil had already been murdered by Almalexia in his Clockwork City. The Tribunal's age was over.",
+          "key_figures": ["Vivec", "Almalexia", "Sotha Sil", "Dagoth Ur", "Nerevarine", "Azura"],
+          "key_artifacts": ["Heart of Lorkhan", "Kagrenac's Tools"],
+          "key_locations": ["Red Mountain", "Clockwork City", "Vivec City"],
+          "key_events": ["Destruction of Heart of Lorkhan", "End of the Tribunal", "Defeat of Dagoth Ur"],
+          "game": "The Elder Scrolls III: Morrowind"
+        },
+        {
+          "title": "The Oblivion Crisis",
+          "date": "3E 433",
+          "content": "The defining catastrophe of the Third Era. Emperor Uriel Septim VII and all his known heirs were assassinated by the Mythic Dawn — a cult devoted to Mehrunes Dagon. The cult's leader, Mankar Camoran, had obtained the Mysterium Xarxes — a profane text written by Dagon himself. Without a Dragonborn Emperor to maintain the Dragonfires of the White-Gold Tower, the barrier between Mundus and Oblivion collapsed. Oblivion Gates opened across Tamriel, pouring Daedric armies into every province. The city of Kvatch was among the first to fall. The Hero of Kvatch discovered the last heir: Martin Septim, an illegitimate son of Uriel living as a priest. In the final confrontation, Martin Septim shattered the Amulet of Kings and called upon Akatosh directly. Akatosh manifested as an enormous Dragon God avatar and destroyed Mehrunes Dagon's physical manifestation, banishing him from Mundus. The cost was total: Martin burned away entirely and became a stone statue in the Temple District. The Septim bloodline was extinguished. The Dragonfires went dark permanently. The Third Era ended.",
+          "key_figures": ["Uriel Septim VII", "Martin Septim", "Mankar Camoran", "Mehrunes Dagon", "Hero of Kvatch"],
+          "key_artifacts": ["Amulet of Kings", "Mysterium Xarxes"],
+          "key_events": ["Assassination of Uriel Septim VII", "Opening of Oblivion Gates", "Battle of Bruma", "Destruction of Amulet of Kings", "Banishment of Mehrunes Dagon"],
+          "significance": "End of the Septim bloodline; permanent extinguishing of the Dragonfires; end of the Third Era",
+          "game": "The Elder Scrolls IV: Oblivion"
+        }
+      ]
+    },
+    {
+      "id": "fourth_era",
+      "name": "The Fourth Era",
+      "subtitle": "A World Without the Septims",
+      "period": "4E 1 — 4E 201+",
+      "overview": "The age following the Oblivion Crisis. The Empire fragmented, new powers rose, and ultimately the World Eater Alduin returned — only to be defeated by a new Dragonborn.",
+      "sections": [
+        {
+          "title": "The Post-Septim Chaos",
+          "date": "4E 1–48",
+          "content": "With no Emperor and no Dragonborn heir, the Empire fractured. High Chancellor Ocato served as Potentate, attempting to hold the Empire together. Morrowind was struck by catastrophe — the Red Year (4E 5), when the volcano Red Mountain erupted catastrophically following the death of Vivec, who had held it in check. Vast swathes of Morrowind were destroyed. Hundreds of thousands of Dunmer refugees fled to Skyrim and Black Marsh. The Argonians — historically enslaved by the Dunmer — used the chaos to invade southern Morrowind, sacking Mournhold in a brutal reversal.",
+          "key_events": [
+            { "name": "The Red Year", "date": "4E 5", "description": "Red Mountain erupts, devastating Morrowind" },
+            { "name": "Argonian Invasion", "date": "4E 6", "description": "Argonians invade southern Morrowind, sack Mournhold" }
+          ]
+        },
+        {
+          "title": "The Umbriel Crisis",
+          "date": "4E 48",
+          "content": "A mysterious floating city called Umbriel drifted across Tamriel, raising the dead into an undead army as it traveled. It devastated portions of Black Marsh, Morrowind, and Cyrodiil before ultimately being stopped.",
+          "key_events": ["Umbriel crosses Tamriel raising dead armies"]
+        },
+        {
+          "title": "The Great War",
+          "date": "4E 171–175",
+          "content": "The Aldmeri Dominion had re-formed, now dominated by a radical faction of Altmer called the Thalmor, who believed Talos's apotheosis was a lie and that Men were inferior to Mer. In 4E 171, the Dominion sent an ultimatum to Emperor Titus Mede II: ban Talos worship, dissolve the Blades, and cede large territories. Titus Mede II refused. Dominion armies invaded from south and west, achieving shocking early successes and briefly capturing the Imperial City. Titus Mede II launched a desperate counterattack — the Battle of the Red Ring — which retook the Imperial City at enormous cost. After four years, both sides were exhausted. The White-Gold Concordat (4E 175) ended the war with terms deeply humiliating to the Empire: Talos worship banned, the Blades disbanded, southern Hammerfell ceded to the Dominion. Hammerfell refused to accept the treaty, fought on alone for five more years, and ultimately forced the Aldmeri out — then broke from the Empire in disgust. The Thalmor used the Concordat to become a feared secret police, actively hunting Talos worshippers across the Empire.",
+          "key_figures": ["Titus Mede II", "Thalmor leadership"],
+          "key_events": [
+            { "name": "Aldmeri Invasion", "date": "4E 171" },
+            { "name": "Fall of the Imperial City", "date": "4E 174" },
+            { "name": "Battle of the Red Ring", "date": "4E 175" },
+            { "name": "White-Gold Concordat signed", "date": "4E 175" },
+            { "name": "Hammerfell breaks from Empire", "date": "4E 180" }
+          ],
+          "significance": "Permanently weakened the Empire and emboldened the Aldmeri Dominion; banned Talos worship and planted the seeds of the Stormcloak Rebellion"
+        },
+        {
+          "title": "The Stormcloak Rebellion",
+          "date": "4E 201",
+          "content": "The Great War's humiliating peace treaty created a powder keg in Skyrim. Ulfric Stormcloak, Jarl of Windhelm, challenged High King Torygg of Skyrim to a duel and killed him using the Voice — an act that split Skyrim in two. The Stormcloak Rebellion pitted pro-independence Nords (who wanted the right to worship Talos and freedom from Imperial law) against the Imperial Legion (who believed only a united Empire could resist the Aldmeri Dominion). Both sides had legitimate arguments, creating a genuine political and philosophical conflict with no obvious correct answer.",
+          "key_figures": ["Ulfric Stormcloak", "General Tullius", "High King Torygg", "Elisif the Fair"],
+          "factions": [
+            { "name": "Stormcloaks", "goal": "Independence for Skyrim, restoration of Talos worship", "leader": "Ulfric Stormcloak" },
+            { "name": "Imperial Legion", "goal": "Maintain Imperial unity against the Aldmeri Dominion", "leader": "General Tullius" }
+          ]
+        },
+        {
+          "title": "The Return of Alduin and the Last Dragonborn",
+          "date": "4E 201",
+          "content": "Alduin, the World Eater — the dragon cast forward through time at the end of the Dragon War — reappeared at the Nordic burial mound of Helgen, disrupting the execution of the future Dragonborn. Alduin began resurrecting ancient dragons from burial mounds across Skyrim, building an army. The Dragonborn was discovered, trained by the Greybeards at High Hrothgar, retrieved an Elder Scroll from the Dwemer ruin of Blackreach, and used it to witness — and learn — the ancient shout Dragonrend. In a climactic confrontation at the Throat of the World, Dragonrend forced Alduin to land, and after a fierce battle Alduin escaped to Sovngarde. The Dragonborn captured Alduin's lieutenant Odahviing and traveled to Skuldafn. In Sovngarde, allied with the ancient Nord heroes Hakon One-Eye, Gormlaith Golden-Hilt, and Felldir the Old, the Dragonborn dispelled Alduin's mist and slew him — not banishing him through time, but truly and permanently ending the World Eater. Many dragons, including Paarthurnax, chose to live in peace afterward.",
+          "key_figures": ["Alduin", "Dragonborn (Last)", "Paarthurnax", "Odahviing", "Hakon One-Eye", "Gormlaith Golden-Hilt", "Felldir the Old"],
+          "key_locations": ["Helgen", "High Hrothgar", "Throat of the World", "Blackreach", "Skuldafn", "Sovngarde"],
+          "key_artifacts": ["Elder Scroll"],
+          "key_shouts": ["Dragonrend", "Odahviing (summon)", "Call of Valor"],
+          "significance": "Permanent defeat of Alduin the World Eater; validation of the Dragonborn as the greatest hero of the age",
+          "game": "The Elder Scrolls V: Skyrim"
+        },
+        {
+          "title": "The Dawnguard and the Tyranny of the Sun",
+          "date": "4E 201",
+          "content": "The ancient Vampire Lord Harkon of the Volkihar clan sought to fulfill a prophecy called the Tyranny of the Sun — using an Elder Scroll and his daughter Serana (sealed away for centuries with the scroll) to blot out the sun permanently and make the entire world a paradise for vampires. The re-formed order of vampire hunters, the Dawnguard, and the Dragonborn foiled this plan. Harkon was slain, the Elder Scroll secured.",
+          "key_figures": ["Harkon", "Serana", "Isran"],
+          "key_artifacts": ["Elder Scroll (Blood)", "Auriel's Bow"],
+          "game": "The Elder Scrolls V: Skyrim — Dawnguard DLC"
+        },
+        {
+          "title": "Miraak and the First Dragonborn",
+          "date": "4E 201",
+          "content": "The ancient Dragon Priest Miraak — the first Dragonborn, who had turned against the dragons in ages past and been sealed in the realm of Hermaeus Mora — sought to return to Nirn and dominate all dragons and Dragonborn. On the island of Solstheim, Miraak had been secretly exerting control over the islanders. The Last Dragonborn traveled to Hermaeus Mora's realm of Apocrypha and ultimately slew Miraak there, absorbing his soul and becoming definitively the last and greatest Dragonborn.",
+          "key_figures": ["Miraak", "Hermaeus Mora"],
+          "key_locations": ["Solstheim", "Apocrypha"],
+          "game": "The Elder Scrolls V: Skyrim — Dragonborn DLC"
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    { "period": "Dawn Era", "event": "Creation of Mundus, Heart of Lorkhan, Daedric Princes established" },
+    { "period": "ME 2500–ME 1", "event": "Aldmer diverge into elven races; Dragon War; Ysgramor and the Five Hundred Companions; Snow Elves' fall" },
+    { "period": "1E 242", "event": "Alessian Revolt; First Empire founded; Amulet of Kings forged" },
+    { "period": "1E 482", "event": "Battle of Glenumbria Moors; Alessian Order broken" },
+    { "period": "1E 700", "event": "Battle of Red Mountain; Dwemer vanish; Tribunal formed; Chimer become Dunmer" },
+    { "period": "1E 2703", "event": "Akaviri Invasion; Reman Cyrodiil unites forces; Second Empire founded" },
+    { "period": "2E 321", "event": "Guilds Act; Fighters Guild and Mages Guild chartered" },
+    { "period": "2E 430", "event": "Last Akaviri Potentate assassinated; Second Empire collapses; Interregnum begins" },
+    { "period": "2E 582", "event": "Planemeld; Three Banners War; Molag Bal defeated; ESO events" },
+    { "period": "2E 852–896", "event": "Tiber Septim conquers Tamriel; Third Era begins; Talos apotheosized" },
+    { "period": "3E 389", "event": "Jagar Tharn imprisons Uriel Septim VII; Eternal Champion rescues him (Arena)" },
+    { "period": "3E 417", "event": "Warp in the West; Numidium rampages; High Rock reorganized (Daggerfall)" },
+    { "period": "3E 427", "event": "Nerevarine destroys Heart of Lorkhan; Tribunal ends; Dagoth Ur defeated (Morrowind)" },
+    { "period": "3E 433", "event": "Oblivion Crisis; Martin Septim's sacrifice; Septim line ends; Third Era ends (Oblivion)" },
+    { "period": "4E 5", "event": "The Red Year — Red Mountain erupts; Morrowind devastated" },
+    { "period": "4E 48", "event": "Umbriel Crisis — floating city raises undead army across Tamriel" },
+    { "period": "4E 171–175", "event": "Great War between Empire and Aldmeri Dominion; White-Gold Concordat" },
+    { "period": "4E 201", "event": "Return of Alduin; Stormcloak Rebellion; Last Dragonborn rises; World Eater permanently slain (Skyrim)" }
+  ],
+  "sources": [
+    "The Annotated Anuad",
+    "Before the Ages of Man",
+    "2920, The Last Year of the First Era",
+    "The Real Barenziah",
+    "A Short History of Morrowind",
+    "Pocket Guide to the Empire (Third and Fourth Editions)",
+    "The Elder Scrolls I: Arena",
+    "The Elder Scrolls II: Daggerfall",
+    "The Elder Scrolls III: Morrowind",
+    "The Elder Scrolls IV: Oblivion",
+    "The Elder Scrolls V: Skyrim",
+    "The Elder Scrolls Online"
+  ]
+}

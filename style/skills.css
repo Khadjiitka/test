@@ -1,0 +1,183 @@
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel', serif;
+            background: url('../pic/skills/bg_skills.PNG') no-repeat center center fixed;
+            background-size: cover;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+
+        /* Fog overlay */
+        .background-fog {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(3px);
+            z-index: -1;
+        }
+
+        /* Navigation panel */
+        .side-menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.8);
+            padding: 20px;
+            border-right: 2px solid #555;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .side-menu h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ddd;
+            font-size: 22px;
+            font-family: "IM Fell English SC", serif;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-menu ul li {
+            margin: 12px 0;
+        }
+
+        .side-menu ul li a {
+            color: #cfcfcf;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .side-menu ul li a:hover {
+            color: white;
+            margin-left: 5px;
+        }
+
+        .btn-generator-nav {
+            display: block;
+            margin-top: 30px;
+            padding: 12px;
+            background: #2d2d2d;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn-generator-nav:hover {
+            background: #444;
+            transform: scale(1.05);
+        }
+
+        /* CONTENT */
+        .content {
+            margin-left: 300px;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px black;
+        }
+
+        /* LIST */
+        .guild-list {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            align-items: center;
+        }
+
+        /* ONE ITEM */
+        .guild-item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 900px;
+        }
+
+        /* IMAGE WRAPPER */
+        .image-wrapper {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            /* квадрат */
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 0 20px black;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        /* BLUR EFFECT */
+        .image-wrapper:hover img {
+            filter: blur(4px) brightness(0.6);
+            transform: scale(1.05);
+        }
+
+        /* TITLE OVER IMAGE */
+        .overlay-title {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 600;
+            opacity: 0;
+            transition: 0.4s;
+            text-shadow: 0 0 10px black;
+        }
+
+        .image-wrapper:hover .overlay-title {
+            opacity: 1;
+        }
+
+        /* DESCRIPTION SIDE */
+        .side-description {
+            max-width: 400px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: 0.4s;
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        /* SHOW TEXT ON HOVER */
+        .guild-item:hover .side-description {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* SCROLL FADE-IN */
+        .content {
+            margin-left: 300px;
+            padding: 40px;
+
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }

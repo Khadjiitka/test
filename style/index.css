@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background: url('./pic/logo_main.JPG') no-repeat center center fixed;
+    background-size: cover;
+    color: #e5e5e5;
+}
+
+.background-fog {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
+
+/* Навигация */
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 20px;
+    border-right: 2px solid #555;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.side-menu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 22px;
+    font-family: "IM Fell English SC", serif;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 12px 0;
+}
+
+.side-menu ul li a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    color: white;
+    margin-left: 5px;
+}
+
+.btn-generator-nav {
+    display: block;
+    margin-top: 30px;
+    padding: 12px;
+    background: #2d2d2d;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-generator-nav:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+/* Основной текст */
+.content {
+    position: absolute;
+    right: 40px;
+    top: 120px;
+    width: 32%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+}
+
+/* Курсор */
+.cursor-glow {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(180, 220, 255, 0.4);
+    box-shadow: 0 0 20px rgba(180, 220, 255, 0.8),
+        0 0 40px rgba(180, 220, 255, 0.6);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.2s, height 0.2s;
+    z-index: 9999;
+}
+
+.snow-particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.9;
+    animation: snowFade 1s linear forwards;
+}
+
+@keyframes snowFade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.2) translateY(15px);
+        opacity: 0;
+    }
+}

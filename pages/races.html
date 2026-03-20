@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guilds of Skyrim</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/skills.css">
+
+    <style>
+        /* ================= BODY ================= */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel', serif;
+            background: url('../pic/races/racesBG.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+
+        /* ================= FOG ================= */
+
+        .background-fog {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(2px);
+            pointer-events: none;
+
+            z-index: 0;
+
+            opacity: 0;
+            animation: fogFade 2s ease forwards;
+        }
+
+        @keyframes fogFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes fogMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+
+
+        /* ================= CONTENT ================= */
+
+        .content {
+            margin-left: 300px;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1.2s ease;
+        }
+
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            text-shadow: 0 0 15px black;
+        }
+
+        /* ================= GUILD LIST ================= */
+
+        .guild-list {
+            display: flex;
+            flex-direction: column;
+            gap: 90px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        /* ================= ITEM ================= */
+
+        .guild-item {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 900px;
+
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s ease;
+        }
+
+        .guild-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= IMAGE ================= */
+
+        .image-wrapper {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 0 25px black;
+            cursor: pointer;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .image-wrapper:hover img {
+            filter: blur(4px) brightness(0.6);
+            transform: scale(1.05);
+        }
+
+        /* ================= TITLE OVER IMAGE ================= */
+
+        .overlay-title {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 600;
+            opacity: 0;
+            transition: 0.4s;
+            text-shadow: 0 0 15px black;
+        }
+
+        .image-wrapper:hover .overlay-title {
+            opacity: 1;
+        }
+
+        /* ================= DESCRIPTION ================= */
+
+        .side-description {
+            max-width: 400px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: 0.5s ease;
+        }
+
+        .guild-item:hover .side-description {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* КНОПКА НАЗАД */
+        .back-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #2d2d2d;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            z-index: 50;
+        }
+
+        .back-btn:hover {
+            background: #444;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-fog"></div>
+
+
+
+
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>Races of Skyrim</h1>
+
+        <div class="guild-list">
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Nord.webp">
+                    <div class="overlay-title">Nord</div>
+                </div>
+
+                <div class="side-description">
+                    The School of Alteration involves the manipulation of the physical world and its natural properties.
+                    This skill makes it
+                    easier to cast spells like Waterbreathing, magical protection, and Paralysis
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Breton.webp" alt="Breton">
+                    <div class="overlay-title">Breton</div>
+                </div>
+
+                <div class="side-description">
+                    The School of Conjuration governs raising the dead or summoning creations from Oblivion.
+                    This skill makes it easier to cast these spells as well as Soul Trap and bindings.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Imper.webp" alt="Imperia">
+                    <div class="overlay-title">Imperial</div>
+                </div>
+
+                <div class="side-description">
+                    The School of Destruction involves the [sic] harnessing the energies of fire, frost and shock. This
+                    skill makes it
+                    easier to cast spells like Fireball, Ice Spike, and Lightning Bolt.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Redgard.webp" alt="Redguard">
+                    <div class="overlay-title">Redguard</div>
+                </div>
+
+                <div class="side-description">
+                    The School of Restoration involves control over life forces. This skill makes it easier to cast
+                    spells like Healing,
+                    Turn Undead, and magical Wards.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Ork.webp" alt="Orsimer">
+                    <div class="overlay-title">Orsimer</div>
+                </div>
+
+                <div class="side-description">
+                    The School of Illusion involves manipulating the mind of the enemy. This skill makes it easier to
+                    cast spells like Fear,
+                    Calm, and Invisibility.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Bosmer.webp" alt="Bosmer">
+                    <div class="overlay-title">Bosmer</div>
+                </div>
+
+                <div class="side-description">
+                    The more powerful the enchanter, the stronger the magic he can bind to his weapons and armor.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Altmer.webp" alt="Altmer">
+                    <div class="overlay-title">Altmer</div>
+                </div>
+
+                <div class="side-description">
+                    The art of blocking an enemy's blows with a shield or weapon. Blocking reduces the damage and
+                    staggering from physical
+                    attacks.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Dunmer.webp" alt="Dunmer">
+                    <div class="overlay-title">Dunmer</div>
+                </div>
+
+                <div class="side-description">
+                    An archer is trained in the use of bows and arrows. The greater the skill, the deadlier the shot.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Khajiit.webp" alt="Khajiit">
+                    <div class="overlay-title">Khajiit</div>
+                </div>
+
+                <div class="side-description">
+                    The art of combat using one-handed weapons such as daggers, swords, maces, and war axes. Those
+                    trained in this skill
+                    deliver deadlier blows.
+                </div>
+            </div>
+
+
+            <div class="guild-item">
+                <div class="image-wrapper">
+                    <img src="../pic/races/Argonian.webp" alt="Argonian">
+                    <div class="overlay-title">Argonian</div>
+                </div>
+
+                <div class="side-description">
+                    The art of combat using two-handed weapons, such as greatswords, battle axes, and warhammers. Those
+                    trained in this
+                    skill deliver deadlier blows.
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <a href="../index.html" class="back-btn">Main Page</a>
+
+
+    <script>
+
+        window.addEventListener("DOMContentLoaded", () => {
+
+            const content = document.querySelector('.content');
+            content.classList.add('visible');
+
+            const items = document.querySelectorAll('.guild-item');
+
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('show');
+                }, index * 150);
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
